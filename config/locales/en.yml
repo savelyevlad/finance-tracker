@@ -31,3 +31,13 @@
 
 en:
   hello: "Hello world"
+  devise:
+    sessions:
+      new:
+        sign_in: 'Log in'
+    registrations:
+      new:
+        sign_up: 'Sign up'
+    passwords:
+      new:
+        send_me_reset_password_instructions: 'Send me reset password instructions'

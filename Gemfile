@@ -45,6 +45,8 @@ gem 'jquery-rails'
 gem "webpacker"
 
 gem 'devise'
+gem "devise-i18n"
+gem "devise-bootstrap5"
 
 # Use Sass to process CSS
 # gem "sassc-rails"
