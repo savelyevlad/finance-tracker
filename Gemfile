@@ -48,6 +48,8 @@ gem 'devise'
 gem "devise-i18n"
 gem "devise-bootstrap5"
 
+gem "font-awesome-rails"
+
 # gem 'iex-ruby-client'
 gem 'binance'
 

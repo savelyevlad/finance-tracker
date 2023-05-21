@@ -118,6 +118,8 @@ GEM
       eventmachine (>= 0.12.0)
       websocket-driver (>= 0.5.1)
     ffi (1.15.5-x64-mingw-ucrt)
+    font-awesome-rails (4.7.0.8)
+      railties (>= 3.2, < 8.0)
     globalid (1.0.0)
       activesupport (>= 5.0)
     i18n (1.12.0)
@@ -275,6 +277,7 @@ DEPENDENCIES
   devise
   devise-bootstrap5
   devise-i18n
+  font-awesome-rails
   importmap-rails
   jbuilder
   jquery-rails
