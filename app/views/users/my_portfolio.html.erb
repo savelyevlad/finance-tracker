@@ -19,12 +19,8 @@
 <br>
 <% if @stock %>
   <div class='card card-header results-block'>
-    <% if @stock.last_price != 0 %>
-      <strong>Symbol: </strong> <%= @stock.ticker %>
-      <strong>Name: </strong> <%= @stock.name %>
-      <strong>Price: </strong> <%= @stock.last_price %>
-    <% else %>
-      No such symbol: <%= @stock.ticker %>
-    <% end %>
+    <strong>Symbol: </strong> <%= @stock.ticker %>
+    <strong>Name: </strong> <%= @stock.name %>
+    <strong>Price: </strong> <%= @stock.last_price %>
   </div>
 <% end %>
