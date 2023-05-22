@@ -53,6 +53,8 @@ gem "font-awesome-rails"
 # gem 'iex-ruby-client'
 gem 'binance'
 
+gem 'byebug'
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
