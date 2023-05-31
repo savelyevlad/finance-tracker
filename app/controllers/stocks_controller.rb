@@ -8,7 +8,9 @@ class StocksController < ApplicationController
           flash[:alert] = 'No such symbol'
           redirect_to my_portfolio_path
         else
-          render 'users/my_portfolio'
+          respond_to do |format|
+            format.js { render partial: 'users/result_js' }
+          end
         end
       else
         flash[:alert] = 'Cannot connect to binance server'
