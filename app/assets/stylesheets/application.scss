@@ -34,6 +34,8 @@
 
 .logout-button {
   margin-right: 5px;
+  display: block;
+  padding: var(--bs-nav-link-padding-y) 5px;
 }
 
 .btn-xs {
