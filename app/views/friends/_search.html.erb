@@ -6,8 +6,7 @@
   <% @my_friends.to_a.each do |friend| %>
     <div class='row'>
       <div class='card card-header results-block'>
-        <strong>First name: </strong> <%= friend.first_name %>
-        <strong>Last name: </strong> <%= friend.last_name %>
+        <strong>Name: </strong> <%= friend.full_name %>
         <% if not current_user.friends.include? friend %>
           <%= link_to 'Follow', '', class: 'btn btn-xs btn-success', method: :post %>
         <% else %>
