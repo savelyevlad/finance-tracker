@@ -8,8 +8,24 @@ class UsersController < ApplicationController
   end
 
   def search
-    respond_to do |format|
-      format.js { render partial: 'friends/search_js' }
+    if params[:friend].present?
+      @my_friends = User.search(params[:friend])
+      if @my_friends.count == 0
+        respond_to do |format|
+          flash.now[:alert] = '0 people found'
+          format.js { render partial: 'friends/search_js' }
+        end
+      else
+        respond_to do |format|
+          format.js { render partial: 'friends/search_js' }
+        end
+      end
+    else
+      respond_to do |format|
+        flash.now[:alert] = 'Please enter a name to search'
+        format.js { render partial: 'friends/search_js' }
+      end
     end
+
   end
 end

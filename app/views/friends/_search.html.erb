@@ -1,0 +1,21 @@
+<div class='results-block'>
+  <%= render 'layouts/messages' %>
+</div>
+
+<% if @my_friends %>
+  <% @my_friends.to_a.each do |friend| %>
+    <div class='row'>
+      <div class='card card-header results-block'>
+        <strong>First name: </strong> <%= friend.first_name %>
+        <strong>Last name: </strong> <%= friend.last_name %>
+        <% if not current_user.friends.include? friend %>
+          <%= link_to 'Follow', '', class: 'btn btn-xs btn-success', method: :post %>
+        <% else %>
+          <span class='badge bg-secondary'>
+            is your friend
+          </span>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+<% end %>

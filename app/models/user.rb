@@ -27,4 +27,8 @@ class User < ApplicationRecord
     return "#{first_name} #{last_name}" if first_name or last_name
     "Anonymous"
   end
+
+  def self.search(name)
+    where("first_name LIKE ? OR last_name LIKE ? OR email LIKE ?", "%#{name}%", "%#{name}%", "%#{name}%")
+  end
 end
