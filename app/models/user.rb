@@ -29,6 +29,7 @@ class User < ApplicationRecord
   end
 
   def self.search(name)
+    name.strip!
     where("first_name LIKE ? OR last_name LIKE ? OR email LIKE ?", "%#{name}%", "%#{name}%", "%#{name}%")
   end
 end
