@@ -7,7 +7,7 @@
     <div class='row'>
       <div class='card card-header results-block'>
         <strong>Name: </strong> <%= friend.full_name %>
-        <strong>Profile: </strong> <%= link_to 'View profile', '#', class: 'btn btn-xs btn-success' %>
+        <strong>Profile: </strong> <%= link_to 'View profile', user_path(friend), class: 'btn btn-xs btn-success' %>
         <% if not current_user.friends.include? friend %>
           <%= link_to 'Follow', friendships_path(friend: friend), class: 'btn btn-xs btn-success', method: :post %>
         <% else %>

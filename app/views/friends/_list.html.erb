@@ -12,7 +12,10 @@
           <% @my_friends.each do |friend| %>
             <tr>
               <td><%= friend.full_name %></td>
-              <td><%= link_to 'Stop following', friendship_path(friend), method: :delete, data: {confirm: 'Are you sure'}, class: 'btn btn-xs btn-warning' %></td>
+              <td>
+                <%= link_to 'View Profile', user_path(friend), class: 'btn btn-xs btn-success' %>
+                <%= link_to 'Stop following', friendship_path(friend), method: :delete, data: {confirm: 'Are you sure'}, class: 'btn btn-xs btn-warning' %>
+              </td>
             </tr>
           <% end %>
         </tbody>
