@@ -10,6 +10,8 @@ class UsersController < ApplicationController
   def search
     if params[:friend].present?
       @my_friends = User.search(params[:friend])
+      @my_friends = @my_friends.to_a
+      @my_friends.delete(current_user)
       if @my_friends.count == 0
         respond_to do |format|
           flash.now[:alert] = '0 people found'
