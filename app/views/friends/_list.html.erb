@@ -4,16 +4,14 @@
       <table class="table table-bordered table-hover">
         <thead>
           <tr>
-            <th scope="col">First Name</th>
-            <th scope="col">Last Name</th>
+            <th scope="col">Full Name</th>
             <th scope="col">Actions</th>
           </tr>
         </thead>
         <tbody>
           <% @my_friends.each do |friend| %>
             <tr>
-              <td><%= friend.first_name %></td>
-              <td><%= friend.last_name %></td>
+              <td><%= friend.full_name %></td>
               <td><%= link_to 'Stop following', friendship_path(friend), method: :delete, data: {confirm: 'Are you sure'}, class: 'btn btn-xs btn-warning' %></td>
             </tr>
           <% end %>
